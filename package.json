@@ -16,6 +16,7 @@
     "@types/node": "^8.0.17",
     "@types/react": "^15.6.0",
     "@types/react-dom": "^15.5.1",
+    "antd": "2.12.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
