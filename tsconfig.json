@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "src/*"]
+    },
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
@@ -18,6 +23,7 @@
     "noUnusedLocals": true
   },
   "exclude": [
+    "config-overrides.js",
     "node_modules",
     "build",
     "scripts",
