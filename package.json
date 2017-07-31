@@ -20,8 +20,8 @@
     "react-dom": "^15.6.1"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "start": "BROWSER=none react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   }
