@@ -1,6 +1,9 @@
 module.exports = function override(config, env) {
-  const tsLoader = config.module.rules.find(conf => {
-    return conf.loader && conf.loader.includes('ts-loader')
+  const oneOf = config.module.rules.find(conf => {
+    return conf.oneOf
+  }).oneOf
+  const tsLoader = oneOf.find(conf => {
+    return conf.loader && conf.loader.includes('ts-loader');
   })
   tsLoader.loader = require.resolve('awesome-typescript-loader')
   tsLoader.query = {
@@ -8,7 +11,7 @@ module.exports = function override(config, env) {
   }
 
   const tsLintLoader = config.module.rules.find(conf => {
-    return conf.loader && conf.loader.includes('tslint-loader')
+    return conf.loader && conf.loader.includes('tslint-loader');
   })
   tsLintLoader.options = tsLintLoader.options || {}
   // FIXED Warning: The 'no-use-before-declare' rule requires type infomation.
